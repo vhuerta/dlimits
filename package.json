@@ -1,26 +1,33 @@
 {
-  "name": "dlimits",
+  "name": "@compropago-dev/dlimits",
   "author": "Victor Rafael Huerta <victor@compropago.com, vhuertahnz@gmail.com>",
   "version": "0.0.1",
-  "private": true,
   "description": "Generic rate limiter, and a express middleware",
   "main": "dlimits.js",
   "repository": {
-    "url": "https://github.com/compropago/dlimits.git",
+    "url": "git+https://github.com/compropago/dlimits.git",
     "type": "git"
   },
   "scripts": {
     "clean": "rm -rf *.js",
-    "build": "./node_modules/.bin/babel src -d .",
+    "build": "babel src -d .",
     "prepublish": "npm run clean && npm run build"
   },
+  "contributors": [
+    "Victor Rafael Huerta <victor@compropago.com, vhuertahnz@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/compropago/dlimits/issues"
+  },
+  "homepage": "https://github.com/compropago/dlimits#readme",
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-preset-node5": "^11.1.0",
     "babel-preset-node6": "^11.0.0"
   },
-  "contributors": [
-    "Victor Rafael Huerta <victor@compropago.com, vhuertahnz@gmail.com>"
-  ],
-  "license": "compropago"
+  "keywords": [
+    "ratelimit",
+    "express"
+  ]
 }
