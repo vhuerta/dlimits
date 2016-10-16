@@ -1,0 +1,9 @@
+{
+    "esversion": 6,
+    "ignoreDelimiters": [{ "start": "start-non-standard", "end": "end-non-standard" }],
+    "-W058": true,
+    "-W083": true,
+    "-W097": true,
+    "-W117": true, 
+    "expr": true
+}

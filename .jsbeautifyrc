@@ -1,0 +1,19 @@
+{
+  "indent_size": 2,
+  "indent_char": " ",
+  "other": " ",
+  "indent_level": 0,
+  "indent_with_tabs": false,
+  "preserve_newlines": true,
+  "max_preserve_newlines": 1,
+  "jslint_happy": true,
+  "js": {
+    "indent_size": 2,
+    "wrap_line_length": 200,
+    "beautify_on_save": false,
+    "break_chained_methods": true,
+    "brace_style": "collapse-preserve-inline",
+    "space_before_conditional": false,
+    "space_in_paren": false
+  }
+}
