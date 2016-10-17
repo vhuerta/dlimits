@@ -1,7 +1,7 @@
 {
   "name": "@compropago-dev/dlimits",
   "author": "Victor Rafael Huerta <victor@compropago.com, vhuertahnz@gmail.com>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generic rate limiter, and a express middleware",
   "main": "dlimits.js",
   "repository": {
