@@ -131,6 +131,7 @@ class Dlimits {
 
         let promise;
 
+        res = JSON.parse(res);
         if(res && typeof res === 'object' && res.key) { // Already exists
           promise = _this._subsequentRequest(key, res);
         } else { // First try
@@ -219,7 +220,7 @@ class Dlimits {
     return new Promise((resolve, reject) => {
       if(!_this.store || !_this.store.set) return reject(new Error('No correct store implementation: set'));
       key = _this._getKey(key);
-      _this.store.set(key, record, (err) => {
+      _this.store.set(key, JSON.stringify(record), (err) => {
         if(err) return reject(err);
         return resolve(record);
       });
