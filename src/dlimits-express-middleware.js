@@ -1,6 +1,6 @@
 import Dlimits from './dlimits';
 
-export default(tries, time, store, keyResolver = () => {}, limitHandler = () => {}, options) => {
+export default(tries, time, store, keyResolver = () => {}, limitHandler = () => {}, options = {}) => {
 
   // Create dlimits instance
   let dlimits = new Dlimits(tries, time, store, options);
@@ -22,8 +22,8 @@ export default(tries, time, store, keyResolver = () => {}, limitHandler = () => 
           req.dlimit = record || {key: key};
 
           res.header('X-RateLimit-Limit', tries);
-          res.header('X-RateLimit-Remaining', req.dlimit.remain);
-          res.header('X-RateLimit-Reset', req.dlimit.bannedUntil);
+          res.header('X-RateLimit-Remaining', req.dlimit.remain || 0);
+          res.header('X-RateLimit-Reset', req.dlimit.bannedUntil || Date.now());
 
           limitHandler(req, res, next);
         });
