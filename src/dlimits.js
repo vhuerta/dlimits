@@ -39,9 +39,8 @@ const defaultDelayStrategy = (arr, index, min, max) => {
  * @param {Number} bannedUntil Time when was unbanned
  * @param {Number} timeBanned  Time banned
  */
-const defaultResetStrategy = (lastBan, bannedTimes, bannedUntil, timeBanned) => {
-  return(bannedUntil + (bannedTimes * timeBanned)) < Date.now();
-};
+const defaultResetStrategy = (lastBan, bannedTimes, bannedUntil, timeBanned) =>
+  (bannedUntil + (bannedTimes * timeBanned)) < Date.now();
 
 /**
  * This is a default store that use a var in memory
@@ -62,6 +61,11 @@ const defaultStore = {
   get(key, next) {
     let record = storage.find(s => key === s.key);
     next(null, record ? record.data : null);
+  },
+
+  del(key, next) {
+    storage = storage.filter(s => key !== s.key);
+    next(null, data);
   },
 
   reset() {
