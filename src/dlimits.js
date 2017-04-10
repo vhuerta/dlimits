@@ -11,7 +11,7 @@
  * @author Victor Huerta <victor@compropago.com, vhuertahnz@gmail.com>
  */
 
-import uuid from 'node-uuid';
+import uuid from 'uuid';
 
 /**
  * Strategy to determinate the banning delays, this default

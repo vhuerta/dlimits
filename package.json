@@ -1,7 +1,7 @@
 {
   "name": "@compropago-dev/dlimits",
   "author": "Victor Rafael Huerta <victor@compropago.com, vhuertahnz@gmail.com>",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Generic rate limiter, and a express middleware",
   "main": "dlimits.js",
   "repository": {
@@ -32,5 +32,8 @@
   "keywords": [
     "ratelimit",
     "express"
-  ]
+  ],
+  "dependencies": {
+    "uuid": "^3.0.1"
+  }
 }
