@@ -1,5 +1,5 @@
 {
-  "name": "@compropago-dev/dlimits",
+  "name": "dlimits",
   "author": "Victor Rafael Huerta <victor@compropago.com, vhuertahnz@gmail.com>",
   "version": "0.0.5",
   "description": "Generic rate limiter, and a express middleware",
