@@ -6,18 +6,27 @@ Generic rate-limiter and Express rate-limiter middleware
 
 ## How to use it
 ```javascript
-  import Dlimits from 'dlimits';
-  // Constructir allow 300 requests each 1000ms
+  const {default: Dlimits, defaultStore} = require('dlimits');
+  // Constructir allow 1 requests each 2 seconds
   const key = 'my-func';
-  const funcRateLimit = new Dlimits(300, 1000, defaultStore, { minWait: 1000, maxWait: 8000 });
+  const funcRateLimit = new Dlimits(1, 2e3, defaultStore, { minWait: 1000, maxWait: 8000 });
 
   const myFunc = async () => {
     try {
-      await funcRateLimit(key).limit();
+      await funcRateLimit.limit(key);
+      console.log('protected code')
     } catch(e) {
+      console.log(e);
       // Handle rate time limit
     }
   }
+
+  (async () => {
+    await myFunc(); // Will execute
+    await myFunc(); // Will show an error
+    await new Promise(res => setTimeout(res, 3e3));
+    await myFunc(); // Will execute
+  })();
 ```
 
 ## express middleware
