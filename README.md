@@ -7,7 +7,8 @@ Generic rate-limiter and Express rate-limiter middleware
 ## How to use it
 ```javascript
   const {default: Dlimits, defaultStore} = require('dlimits');
-  // Constructir allow 1 requests each 2 seconds
+  
+  // Constructor allow 1 requests each 2 seconds for my-func key
   const key = 'my-func';
   const funcRateLimit = new Dlimits(1, 2e3, defaultStore, { minWait: 1000, maxWait: 8000 });
 
