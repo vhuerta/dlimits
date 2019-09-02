@@ -6,7 +6,7 @@ Generic rate-limiter and Express rate-limiter middleware
 
 ## How to use it
 ```javascript
-  import Dlimitsf rom 'dlimits';
+  import Dlimits from 'dlimits';
   // Constructir allow 300 requests each 1000ms
   const key = 'my-func';
   const funcRateLimit = new Dlimits(300, 1000, defaultStore, { minWait: 1000, maxWait: 8000 });
