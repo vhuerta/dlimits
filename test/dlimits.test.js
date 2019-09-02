@@ -39,7 +39,7 @@ describe.only('dlimits class', () =>  {
 
   });
 
-  it('should accepr 1 single request', done => {
+  it('should accept 1 single request', done => {
 
     let key = '1';
     let dlimits = new Dlimits(10, 1000, defaultStore, { minWait: 200, maxWait: 8000 });
