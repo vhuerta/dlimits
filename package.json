@@ -1,7 +1,7 @@
 {
   "name": "dlimits",
   "author": "Victor Rafael Huerta <vhuertahnz@gmail.com>",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Generic rate limiter, and a express middleware",
   "main": "dlimits.js",
   "repository": {
